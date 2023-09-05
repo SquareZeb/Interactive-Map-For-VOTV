@@ -4,13 +4,13 @@
     <title>VOTV Map of All Things</title>
     <style>
         body {
-            background-color: #6B8944;
+            background-color: #95BD52;
             overflow: hidden;
         }
 
         #map {
             width: 100vw;
-            height: calc(100vh - 40px); /* Adjust to accommodate the coordinates display */
+            height: calc(100vh - 40px);
             overflow: hidden;
             position: relative;
         }
@@ -42,7 +42,7 @@
 
             .marker span {
                 position: absolute;
-                top: -50px; /* Adjust the distance between the marker and the title */
+                top: -50px;
                 left: 50%;
                 transform: translateX(-50%);
                 background-color: rgba(0, 0, 0, 0.8);
@@ -65,7 +65,7 @@
             .marker:before {
                 content: "";
                 position: absolute;
-                bottom: -10px; /* Adjust the position of the arrow */
+                bottom: -10px;
                 left: 50%;
                 transform: translateX(-50%);
                 border-left: 9px solid transparent;
@@ -119,282 +119,339 @@
 </head>
 <body>
     <div id="map">
-        <img src="https://drive.google.com/uc?export=view&id=1imqBLXGJDMIsnODQhEzGORkaN-Eln-T-" alt="Interactive Map">
-        <div class="marker" id="Bmarker" style="top: 1975px; left: 2009px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -14, Y:-10)<br>Located next to base.</span>
+        <img src="https://drive.google.com/uc?export=view&id=1_UxtDx9XR8VjaRLhp907IePonQTWTOjm" alt="Interactive Map">
+        <div class="marker" id="Bmarker" style="top: 1983px; left: 2005px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -14, Y: -10)<br>Located next to base.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2020px; left: 1915px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -63, Y: 12)<br>Located under bridge.</span>
+        <div class="marker" id="Bmarker" style="top: 2028px; left: 1907px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -63, Y: 12)<br>Located under the bridge.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2053px; left: 2065px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 2062px; left: 2048px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: 11, Y: 29)<br>Located in between rocks.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 1983px; left: 2016px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -10, Y: -3)<br>Located behind supply box.</span>
+        <div class="marker" id="Bmarker" style="top: 1996px; left: 2010px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -10, Y: -3)<br>Located behind the supply box.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2011px; left: 2012px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 2025px; left: 2006px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: -14, Y: 6)<br>Located under pipes.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2032px; left: 2012px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -14, Y: 19)<br>Located behind bed.</span>
+        <div class="marker" id="Bmarker" style="top: 2040px; left: 2005px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -14, Y: 19)<br>Located behind the bed.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2032px; left: 2023px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -6, Y: 19)<br>Located on toilet.</span>
+        <div class="marker" id="Bmarker" style="top: 2039px; left: 2014px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -6, Y: 19)<br>Located on the toilet.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2025px; left: 2019px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -7, Y: 13)<br>Located under supply boxes.</span>
+        <div class="marker" id="Bmarker" style="top: 2035px; left: 2013px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -7, Y: 13)<br>Located under the supply boxes.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 1985px; left: 2020px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -9, Y: -3)<br>Located next to server.</span>
+        <div class="marker" id="Bmarker" style="top: 1993px; left: 2021px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -9, Y: -3)<br>Located next to the server.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2008px; left: 2025px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -8, Y: 3)<br>Located behind desk.</span>
+        <div class="marker" id="Bmarker" style="top: 2017px; left: 2029px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -8, Y: 3)<br>Located behind the desk.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2016px; left: 2025px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -9, Y: 9)<br>Located behind desk.</span>
+        <div class="marker" id="Bmarker" style="top: 2021px; left: 2027px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -9, Y: 9)<br>Located behind the desk.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2023px; left: 2029px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: -4, Y: 16)<br>Located behind wooden palletes.</span>
+        <div class="marker" id="Bmarker" style="top: 2030px; left: 2032px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: -4, Y: 16)<br>Located behind wooden pallets.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2031px; left: 2052px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: 6, Y: 19)<br>Located behind wooden palletes.</span>
+        <div class="marker" id="Bmarker" style="top: 2038px; left: 2043px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: 6, Y: 19)<br>Located behind wooden pallets.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2017px; left: 2048px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: 5, Y: 10)<br>Located behind supply boxes.</span>
+        <div class="marker" id="Bmarker" style="top: 2023px; left: 2042px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: 5, Y: 10)<br>Located behind the supply boxes.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 823px; left: 2325px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 837px; left: 2326px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: 157, Y: -584)<br>(Requires: Shovel, Metal Detector) Dig in that specific spot.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 852px; left: 722px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 843px; left: 724px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: -651, Y: -587)<br>Located in the AB Cave entrance.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 1960px; left: 745px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 1956px; left: 743px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: -621, Y: -28)<br>Located behind a desk in The Hole.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2055px; left: 3349px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 2072px; left: 3345px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: 639, Y: 44)<br>Next to the Ship Engine.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2412px; left: 1847px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 2396px; left: 1848px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: -100, Y: 203)<br>Located on the side of Juliett Satellite Dish's first level.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 1970px; left: 2119px; " onclick="showInfo('Burger', 'Coordinates', this)">
-            <span>Burger:<br>(X: 43, Y: -12)<br>Located next to tree.</span>
+        <div class="marker" id="Bmarker" style="top: 1983px; left: 2110px; " onclick="showInfo('Burger', 'Coordinates', this)">
+            <span>Burger:<br>(X: 43, Y: -12)<br>Located next to the tree.</span>
         </div>
-        <div class="marker" id="Bmarker" style="top: 2030px; left: 2047px; " onclick="showInfo('Burger', 'Coordinates', this)">
+        <div class="marker" id="Bmarker" style="top: 2035px; left: 2043px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: 3, Y: 18)<br>Located on the roof.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 1978px; left: 2038px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
-            <span>Tile:<br>(X: 0, Y: -9)<br>Located on the roof of main base.</span>
+        <div class="marker" id="Tmarker" style="top: 1986px; left: 2028px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+            <span>Tile:<br>(X: 0, Y: -9)<br>Located on the roof of the main base.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 2029px; left: 1900px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
-            <span>Tile:<br>(X: -68, Y: 16)<br>Located on the left side of a bridge near main base.</span>
+        <div class="marker" id="Tmarker" style="top: 2036px; left: 1890px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+            <span>Tile:<br>(X: -68, Y: 16)<br>Located on the left side of a bridge near the main base.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 1963px; left: 745px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
-            <span>Tile:<br>(X: -620, Y: -28)<br>Located behind desk in The Hole.</span>
+        <div class="marker" id="Tmarker" style="top: 1969px; left: 736px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+            <span>Tile:<br>(X: -617, Y: -24)<br>Located underneath one of the supply boxes in The Hole.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 1919px; left: 937px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+        <div class="marker" id="Tmarker" style="top: 1915px; left: 931px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
             <span>Tile:<br>(X: -525, Y: -49)<br>Next to a tree base.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 2361px; left: 1131px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+        <div class="marker" id="Tmarker" style="top: 2357px; left: 1130px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
             <span>Tile:<br>(X: -464, Y: 173)<br>Located in the middle of a field.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 1959px; left: 3051px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+        <div class="marker" id="Tmarker" style="top: 1977px; left: 3044px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
             <span>Tile:<br>(X: 500, Y: -2)<br>Located behind the top level of the Uniform Satellite Dish.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 3288px; left: 3372px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+        <div class="marker" id="Tmarker" style="top: 3307px; left: 3360px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
             <span>Tile:<br>(X: 615, Y: 620)<br>Located next to Green Box.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 3369px; left: 1332px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
-            <span>Tile:<br>(X: -372, Y: 702)<br>Located behind desk in Guard Post.</span>
+        <div class="marker" id="Tmarker" style="top: 3376px; left: 1311px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+            <span>Tile:<br>(X: -372, Y: 702)<br>Located above the building in Guard Post.</span>
         </div>
-        <div class="marker" id="Tmarker" style="top: 137px; left: 3760px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
-            <span>Tile:<br>(X: 874, Y: -874)<br>Located on the very corner of the of the playable map, two rivers corner.</span>
+        <div class="marker" id="Tmarker" style="top: 169px; left: 3769px; background-image: url('https://drive.google.com/uc?export=view&id=1WB21bD2Lw0CyFeHQfNlFUrHlLka9HNqk'); width: 60px; height: 60px; " onclick="showInfo('Tile', 'Coordinates', this)">
+            <span>Tile:<br>(X: 874, Y: -874)<br>Located on the very corner of the playable map, two rivers corner.</span>
         </div>
-        <div class="marker" id="Smarker" style="top: 3130px; left: 2515px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
+        <div class="marker" id="Smarker" style="top: 3148px; left: 2499px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
             <span>Skull:<br>(X: 213, Y: 549)<br>Located offset of the center of the Stonehenge behind one layer of grass.</span>
         </div>
-        <div class="marker" id="Smarker" style="top: 2625px; left: 914px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
+        <div class="marker" id="Smarker" style="top: 2624px; left: 902px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
             <span>Skull:<br>(X: -569, Y: 302)<br>Located near a skeleton of bones and a radioactive capsule. In the Darkened Bone Pit.</span>
         </div>
-        <div class="marker" id="Smarker" style="top: 2089px; left: 1352px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
+        <div class="marker" id="Smarker" style="top: 2091px; left: 1348px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
             <span>Skull:<br>(X: -343, Y: 38)<br>Located near the Light Pit, it will be found outside the vicinity of the Light Bone Pit behind a couple bushes.</span>
         </div>
-        <div class="marker" id="Smarker" style="top: 830px; left: 718px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
+        <div class="marker" id="Smarker" style="top: 830px; left: 721px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
             <span>Skull:<br>(X: -655, Y: -600)<br>Located deep inside the AB Cave towards the cave barrier and on your left.</span>
         </div>
-        <div class="marker" id="Smarker" style="top: 2020px; left: 2021px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
+        <div class="marker" id="Smarker" style="top: 2030px; left: 2013px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
             <span>Skull:<br>(X: -7, Y: 12)<br>Located behind one of the boxes in the Bedroom.</span>
         </div>
-        <div class="marker" id="Smarker" style="top: 2056px; left: 3344px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
+        <div class="marker" id="Smarker" style="top: 2076px; left: 3340px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
             <span>Skull:<br>(X: 637, Y: 44)<br>(Requires: Shovel, Metal Detector) Located underneath the Ship Engine,<br> on the left side of the object you will need to point your shovel into the middle hole and as far center as you can reach.</span>
         </div>
-        <div class="marker" id="Smarker" style="top: 1970px; left: 2557px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
+        <div class="marker" id="Smarker" style="top: 1986px; left: 2550px; background-image: url('https://drive.google.com/uc?export=view&id=1-DmPhZrMvFm1J80a1IgVA4mlGk55hPbF'); width: 60px; height: 60px; " onclick="showInfo('Skull', 'Coordinates', this)">
             <span>Skull:<br>(X: 261, Y: -6)<br>(Requires: Shovel, Metal Detector) Located near a large boulder you will need to dig around it in order to access a box that has a skull in it.</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1010px; left: 1005px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1011px; left: 1006px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Romeo<br>(X: -500, Y: -500)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1401px; left: 1429px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1400px; left: 1411px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>November<br>(X: -300, Y: -300)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 994px; left: 2019px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1007px; left: 2022px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Sierra<br>(X: 0, Y: -500)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1001px; left: 2991px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1023px; left: 3001px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Tango<br>(X: 500, Y: -500)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2020px; left: 1009px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2018px; left: 1007px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Yankee<br>(X: -500, Y: 0)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 3000px; left: 2053px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 3008px; left: 2037px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Whiskey<br>(X: 0, Y: 500)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2600px; left: 2673px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2616px; left: 2664px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Papa<br>(X: 300, Y: 300)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1391px; left: 2613px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1416px; left: 2596px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Oscar<br>(X: 300, Y: -300)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1970px; left: 3052px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1988px; left: 3045px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Uniform<br>(X: 500, Y: 0)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 3014px; left: 3106px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 3034px; left: 3093px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Victor<br>(X: 500, Y: 500)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2995px; left: 1087px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2996px; left: 1068px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Xray<br>(X: -500, Y: 500)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2599px; left: 1465px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2588px; left: 1456px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Quebec<br>(X: -300, Y: 300)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1977px; left: 2425px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1991px; left: 2421px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Foxtrot<br>(X: 200, Y: 0)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2386px; left: 1849px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2390px; left: 1846px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Juliett<br>(X: -100, Y: 200)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2375px; left: 2037px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2384px; left: 2025px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>India<br>(X: 0, Y: 200)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2386px; left: 2240px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2393px; left: 2232px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Hotel<br>(X: 100, Y: 200)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1593px; left: 1825px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1605px; left: 1825px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Bravo<br>(X: -100, Y: -200)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1593px; left: 2029px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1610px; left: 2032px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Charlie<br>(X: 0, Y: -200)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2183px; left: 2441px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2198px; left: 2434px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Golf<br>(X: 200, Y: 100)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2010px; left: 1651px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2008px; left: 1635px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Lima<br>(X: -200, Y: 0)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1800px; left: 1630px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1810px; left: 1633px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Mike<br>(X: -200, Y: -100)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 2193px; left: 1659px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 2202px; left: 1645px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Kilo<br>(X: -200, Y: 100)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1596px; left: 2226px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1605px; left: 2224px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Delta<br>(X: 100, Y: -200)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="SDmarker" style="top: 1789px; left: 2430px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
+        <div class="marker" id="SDmarker" style="top: 1798px; left: 2416px; background-image: url('https://drive.google.com/uc?export=view&id=15Ltb9bGn6ylg2lWBaZBjmLxIEPXdFCWa'); width: 60px; height: 60px; " onclick="showInfo('SatelliteDish', 'Coordinates', this)">
             <span>Echo<br>(X: 200, Y: -100)<br>Satellite Dish</span>
         </div>
-        <div class="marker" id="Amarker" style="top: 1713px; left: 3275px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
+        <div class="marker" id="Amarker" style="top: 1732px; left: 3273px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
             <span>Red Argemia:<br>(X: 626, Y: -128)<br>Located in the Deep Pit next to Uniform Satellite Dish, near the fence.</span>
         </div>
-        <div class="marker" id="Amarker" style="top: 2782px; left: 1458px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
+        <div class="marker" id="Amarker" style="top: 2789px; left: 1440px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
             <span>Blue Argemia:<br>(X: -315, Y: 398)<br>Located right next to Quebec Satellite Dish, in a river with bumpy beaches.</span>
         </div>
-        <div class="marker" id="Amarker" style="top: 3824px; left: 2714px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
+        <div class="marker" id="Amarker" style="top: 3854px; left: 2692px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
             <span>Green Argemia:<br>(X: 239, Y: 828)<br>Located on the highest point of the map, outside the fence, near Victor Satellite Dish.</span>
         </div>
-        <div class="marker" id="Amarker" style="top: 2404px; left: 744px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
+        <div class="marker" id="Amarker" style="top: 2413px; left: 731px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
             <span>Cyan Argemia:<br>(X: -630, Y: 190)<br>(Requires: Shovel, Metal Detector) Located on top of a high hill between Quebec and X-ray Satellite Dishes.</span>
         </div>
-        <div class="marker" id="Amarker" style="top: 410px; left: 3785px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
-            <span>Purple Argemia:<br>(X: 872, Y: -793)<br>Located above the border corner tile key, on top of a floating white cube that is high up.<br> The only way to access this prop is flying a drone and pushing it off or flying a platform of balloons and grabbing it that way.</span>
+        <div class="marker" id="Amarker" style="top: 429px; left: 3774px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
+            <span>Purple Argemia:<br>(X: 872, Y: -793)<br>Located above the border corner tile key, on top of a floating white cube that is high up.<br> The only way to access this prop is getting on top of the cube and grabbing the prop.</span>
         </div>
-        <div class="marker" id="Amarker" style="top: 1928px; left: 2114px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
-            <span>Pink Argemia:<br>(X: 34.8, Y: -36.8)<br>Located in a hovering state, it is invisible (until it is touched by a any object or item in the game),<br> to access you need to put a drone at that very exact location and fly straight up and you should be able to hit it. From there it will fall off its hovering state and onto the ground below.</span>
+        <div class="marker" id="Amarker" style="top: 1927px; left: 2103px; background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG'); width: 60px; height: 60px; " onclick="showInfo('Argemia', 'Coordinates', this)">
+            <span>Pink Argemia:<br>(X: 34.8, Y: -36.8)<br>Located in a hovering state, it is invisible (until it is touched by any object or item in the game),<br>you need to fire a gun at the prop, from there it will fall off its hovering state and onto the ground below.</span>
         </div>
-        <div class="marker" id="DPTmarker" style="top: 1959px; left: 753px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px; " onclick="showInfo('DiggableSpot', 'Coordinates', this)">
+        <div class="marker" id="DPTmarker" style="top: 1956px; left: 745px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px;" onclick="showInfo('DiggableSpot', 'Coordinates', this)">
             <span>Diggable Spot:<br>(X: -622, Y: -31)<br>EMF Reader.</span>
         </div>
-        <div class="marker" id="DPTmarker" style="top: 1919px; left: 1800px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px; " onclick="showInfo('DiggableSpot', 'Coordinates', this)">
+        <div class="marker" id="DPTmarker" style="top: 1925px; left: 1794px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px;" onclick="showInfo('DiggableSpot', 'Coordinates', this)">
             <span>Diggable Spot:<br>(X: -118, Y: -41)<br>Free Box of LVL 3 Drives.</span>
         </div>
-        <div class="marker" id="DPTmarker" style="top: 1968px; left: 2556px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px; " onclick="showInfo('DiggableSpot', 'Coordinates', this)">
+        <div class="marker" id="DPTmarker" style="top: 1983px; left: 2551px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px;" onclick="showInfo('DiggableSpot', 'Coordinates', this)">
             <span>Diggable Spot:<br>(X: 261, Y: -6)<br>Box of Bones.</span>
         </div>
-        <div class="marker" id="DPTmarker" style="top: 1968px; left: 2328px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px; " onclick="showInfo('DiggableSpot', 'Coordinates', this)">
+        <div class="marker" id="DPTmarker" style="top: 1979px; left: 2324px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px;" onclick="showInfo('DiggableSpot', 'Coordinates', this)">
             <span>Diggable Spot:<br>(X: 149, Y: -10)<br>Cactis Pet.</span>
         </div>
-        <div class="marker" id="DPTmarker" style="top: 1789px; left: 2973px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px; " onclick="showInfo('DiggableSpot', 'Coordinates', this)">
+        <div class="marker" id="DPTmarker" style="top: 1802px; left: 2979px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px;" onclick="showInfo('DiggableSpot', 'Coordinates', this)">
             <span>Diggable Spot:<br>(X: 465, Y: -85)<br>Infinite Growing Basalt Pillars.</span>
         </div>
-        <div class="marker" id="DPTmarker" style="top: 2625px; left: 913px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px; " onclick="showInfo('DiggableSpot', 'Coordinates', this)">
-            <span>Diggable Spot:<br>(X: -569, Y: 303)<br>Radioative Capsule.</span>
+        <div class="marker" id="DPTmarker" style="top: 2625px; left: 901px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px;" onclick="showInfo('DiggableSpot', 'Coordinates', this)">
+            <span>Diggable Spot:<br>(X: -569, Y: 303)<br>Radioactive Capsule.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 2056px; left: 3344px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Object', 'Coordinates', this)">
+        <div class="marker" id="DPTmarker" style="top: 2473px; left: 3228px; background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL'); width: 60px; height: 130px;" onclick="showInfo('DiggableSpot', 'Coordinates', this)">
+            <span>Diggable Spot:<br>(X: 567, Y: 237)<br>Limestone Block.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 2077px; left: 3341px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Object', 'Coordinates', this)">
             <span>Ship Engine<br>(X: 637, Y: 44)<br>Object</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 3297px; left: 3373px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Object', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 3321px; left: 3359px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Object', 'Coordinates', this)">
             <span>SCP-432<br>(X: 613, Y: 623)<br>Object</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 1060px; left: 2872px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Object', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 1076px; left: 2874px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Object', 'Coordinates', this)">
             <span>Invisible Boulder<br>(X: 437, Y: -467)<br>Object</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 306px; left: 329px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 306px; left: 341px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Erie and Argemia Statues<br>(X: -801, Y: -814)<br>Outside the fence.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 3366px; left: 1341px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 3375px; left: 1322px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Guard Post<br>(X: -373, Y: 703)<br>Outside the fence.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 1996px; left: 2045px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 2014px; left: 2028px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Main Base<br>(X: 0, Y: 0)<br>Located in the middle of the entire world.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 2078px; left: 2044px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 2055px; left: 2072px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Bunker<br>(X: 20, Y: 25)<br>Located right beside the Main Base.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 1939px; left: 2100px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 1942px; left: 2069px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Lighttower<br>(X: 19, Y: -31)<br>Located right beside the Main Base.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 3118px; left: 2509px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 3130px; left: 2496px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Stonehenge<br>(X: 213, Y: 541)<br>Throw and jump into ATV over the fence to access.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 2104px; left: 1340px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 2108px; left: 1332px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Light Bone Pit<br>(X: -352, Y: 47)<br>Located between the Kilo and Lima Satellite Dishes, simply walk in between them and up.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 2626px; left: 914px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 2625px; left: 901px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Darkened Bone Pit<br>(X: -569, Y: 303)<br>Near X-ray.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 1712px; left: 3274px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 1732px; left: 3272px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Deep Pit<br>(X: 626, Y: -128)<br>Near Uniform Satellite Dish and near the fence.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 841px; left: 720px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 841px; left: 723px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>AB Cave (Antibreather Cave)<br>(X: -651, Y: -585)<br>Near Romeo Satellite Dish, on the side of a giant cliff.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 809px; left: 1969px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 815px; left: 1971px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Ariral Picnic<br>(X: -192, Y: -500)<br>Near Sierra Satellite Dish in a valley. (Event specific).</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 2788px; left: 2834px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 2806px; left: 2821px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Ariral Treehouse<br>(X: 366, Y: 388)<br>Near the Stonehenge Landmark (Event specific).</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 1966px; left: 749px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 1963px; left: 743px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>The Hole<br>(X: -618, Y: -27)<br>Near Yankee Satellite Dish.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 1858px; left: 587px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 1855px; left: 580px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Fence Opening<br>(X: -697, Y: -80)<br>Near The Hole.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 1688px; left: 250px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
-            <span>Secret Staircase<br>(X: 1293, Y: -223)<br>Inaccessible in Storymode,<br> location is outside the barrier.</span>
+        <div class="marker" id="Lmarker" style="top: 1524px; left: 45px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Secret Staircase<br>(X: 1293, Y: -223)<br>Inaccessible in Storymode,<br>location is outside the barrier.</span>
         </div>
-        <div class="marker" id="Lmarker" style="top: 3956px; left: 1562px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+        <div class="marker" id="Lmarker" style="top: 3963px; left: 1538px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
             <span>Large Bone Pit<br>(X: -265, Y: 1005)<br>Inaccessible in Storymode, location is outside the barrier, near Guard Post.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 1550px; left: 705px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Crashed Ariral Tp Chamber<br>(X: -651, Y: -237)<br>Located in the bottom of the valley near the Fence Opening (Event specific).</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 2543px; left: 3218px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Abandoned Well<br>(X: 564, Y: 265)<br>Located between the Uniform and Victor satellite Dishes.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 843px; left: 1296px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Small Graveyard<br>(X: -347, Y: -563)<br>Located on a hill above Transformer 2.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 1427px; left: 3321px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Sewer<br>(X: 675, Y: -277)<br>In the river near the Danger Forest.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 993px; left: 3114px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Leaking Nuclear Barrels<br>(X: 570, Y: -517)<br>In the river near the Danger Forest.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 2626px; left: 1623px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Abandoned Sedan<br>(X: -209, Y: 307)<br>In the river near the Quebec Satellite Dish.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 2040px; left: 2862px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Wooded Shack<br>(X: 408, Y: 22)<br>Located in a dense forest near Uniform Satellite Dish.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 3209px; left: 2073px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Circle of Benches<br>(X: 12, Y: 580)<br>Located between the Whiskey Satellite Dish and the Bomb Shelter.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 3306px; left: 2175px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Bomb Shelter<br>(X: 60, Y: 625)<br>Located near the Circle of Benches.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 788px; left: 3245px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Danger Forest<br>(X: -642, Y: -586)<br>Located in the corner of land that is cut off by the river, near Tango Satellite Dish.</span>
+        </div>
+        <div class="marker" id="Lmarker" style="top: 1545px; left: 3094px; background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Closed Up Forest<br>(X: 517, Y: -211)<br>Located near the Deep Pit, throw and jump into ATV over the fence to access.</span>
+        </div>
+        <div class="marker" id="Gmarker" style="top: 2410px; left: 2869px; background-image: url('https://drive.google.com/uc?export=view&id=1snTaffvYupHx_yQ4pxOgs8gq2o_DBQrv'); width: 60px; height: 60px; " onclick="showInfo('Gameplay', 'Coordinates', this)">
+            <span>Transformer 0<br>(X: 396, Y: 199)<br>Gameplay Mechanic</span>
+        </div>
+        <div class="marker" id="Gmarker" style="top: 2485px; left: 943px; background-image: url('https://drive.google.com/uc?export=view&id=1snTaffvYupHx_yQ4pxOgs8gq2o_DBQrv'); width: 60px; height: 60px; " onclick="showInfo('Gameplay', 'Coordinates', this)">
+            <span>Transformer 1<br>(X: -548, Y: 232)<br>Gameplay Mechanic</span>
+        </div>
+        <div class="marker" id="Gmarker" style="top: 1058px; left: 1206px; background-image: url('https://drive.google.com/uc?export=view&id=1snTaffvYupHx_yQ4pxOgs8gq2o_DBQrv'); width: 60px; height: 60px; " onclick="showInfo('Gameplay', 'Coordinates', this)">
+            <span>Transformer 2<br>(X: -397, Y: -472)<br>Gameplay Mechanic</span>
+        </div>
+        <div class="marker" id="Gmarker" style="top: 2125px; left: 2155px; background-image: url('https://drive.google.com/uc?export=view&id=1snTaffvYupHx_yQ4pxOgs8gq2o_DBQrv'); width: 60px; height: 60px; " onclick="showInfo('Gameplay', 'Coordinates', this)">
+            <span>Power Generator<br>(X: 63, Y: 63)<br>Gameplay Mechanic</span>
+        </div>
+        <div class="marker" id="Omarker" style="top: 266px; left: 342px; background-image: url('https://drive.google.com/uc?export=view&id=1AUTckFp6Y5wihU9mqP5H706QDg6wFfd_'); width: 60px; height: 60px;" onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Bryn Fruit<br>(X: -785, Y: -821)<br>Located behind a tree near Erie and Argemia Statues.</span>
+        </div>
+        <div class="marker" id="Omarker" style="top: 1408px; left: 1904px; background-image: url('https://drive.google.com/uc?export=view&id=1AUTckFp6Y5wihU9mqP5H706QDg6wFfd_'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Argemia Mug<br>(X: -58, Y: -295)<br>Located on top of the power line pole, can only be accessed by grabbing it, no object or prop can push it off.</span>
+        </div>
+        <div class="marker" id="Omarker" style="top: 2042px; left: 2860px; background-image: url('https://drive.google.com/uc?export=view&id=1AUTckFp6Y5wihU9mqP5H706QDg6wFfd_'); width: 60px; height: 60px; " onclick="showInfo('Landmark', 'Coordinates', this)">
+            <span>Wendigo Skull<br>(X: 408, Y: 22)<br>Located within the Wooded Shack underneath an red ariral forest tree.</span>
         </div>
     </div>
     <div id="tabContainer">
@@ -405,9 +462,84 @@
         <div class="markerIcon" style="background-image: url('https://drive.google.com/uc?export=view&id=1C503xOBxqrGzEy7IyrwWFWOfdRYg_8gG');" onclick="toggleMarkerVisibility('Amarker')"></div>
         <div class="markerIcon" style="background-image: url('https://drive.google.com/uc?export=view&id=1ym0ry3QxeZQ2tMJpWWEaT-xWTyxWIcZL');" onclick="toggleMarkerVisibility('DPTmarker')"></div>
         <div class="markerIcon" style="background-image: url('https://drive.google.com/uc?export=view&id=1wfnY8kOZsH91EjE5fXUzPUBZR8wf4N6e');" onclick="toggleMarkerVisibility('Lmarker')"></div>
+        <div class="markerIcon" style="background-image: url('https://drive.google.com/uc?export=view&id=1snTaffvYupHx_yQ4pxOgs8gq2o_DBQrv');" onclick="toggleMarkerVisibility('Gmarker')"></div>
+        <div class="markerIcon" style="background-image: url('https://drive.google.com/uc?export=view&id=1AUTckFp6Y5wihU9mqP5H706QDg6wFfd_');" onclick="toggleMarkerVisibility('Omarker')"></div>
     </div>
     <div id="coordinates">Coordinates:<span id="mouseCoordinates">0, 0</span></div>
-
+    <header>
+        <nav>
+            <ul>
+                <li class="tab">
+                    <a href="homepage.htm">Home</a>
+                </li>
+                <li class="tab">
+                    <a href="menu.htm">Items</a>
+                    <ul class="generated-links">
+                        <li><a href="submenu1.htm">Submenu 1</a></li>
+                        <li><a href="submenu2.htm">Submenu 2</a></li>
+                    </ul>
+                </li>
+                <li class="tab">
+                    <a href="orderonline.htm">Objects</a>
+                    <ul class="generated-links">
+                        <li><a href="suborder1.htm">Suborder 1</a></li>
+                        <li><a href="suborder2.htm">Suborder 2</a></li>
+                    </ul>
+                </li>
+                <li class="tab">
+                    <a href="entitieswiki.htm">Entities</a>
+                </li>
+                <li class="tab">
+                    <a href="listofallworlds.htm">Worlds</a>
+                    <ul class="generated-links">
+                        <li><a href="testlevelswiki.htm">Test Levels</a></li>
+                        <li><a href="anomalyworldswiki.htm">Anomaly Worlds</a></li>
+                        <li><a href="otherworldswiki.htm">Other Worlds</a></li>
+                    </ul>
+                </li>
+                <li class="tab">
+                    <a href="aboutus.htm">Signals</a>
+                    <ul class="generated-links">
+                        <li><a href="subabout1.htm">Subabout 1</a></li>
+                        <li><a href="subabout2.htm">Subabout 2</a></li>
+                    </ul>
+                </li>
+                <li class="tab">
+                    <a href="aboutus.htm">Events</a>
+                    <ul class="generated-links">
+                        <li><a href="subabout1.htm">Subabout 1</a></li>
+                        <li><a href="subabout2.htm">Subabout 2</a></li>
+                    </ul>
+                </li>
+                <li class="tab">
+                    <a href="aboutus.htm">Structures</a>
+                    <ul class="generated-links">
+                        <li><a href="subabout1.htm">Subabout 1</a></li>
+                        <li><a href="subabout2.htm">Subabout 2</a></li>
+                    </ul>
+                </li>
+                <li class="tab">
+                    <a href="consolecommandswiki.htm">Console Commands</a>
+                </li>
+                <li class="tab">
+                    <a href="dreamswiki.htm">Dreams</a>
+                </li>
+                <li class="tab">
+                    <a href="aboutus.htm">Achievements</a>
+                    <ul class="generated-links">
+                        <li><a href="subabout1.htm">Subabout 1</a></li>
+                        <li><a href="subabout2.htm">Subabout 2</a></li>
+                    </ul>
+                </li>
+                <li class="tab">
+                    <a href="endingswiki.htm">Game Endings</a>
+                </li>
+                <li class="tab">
+                    <a href="interactablemap.htm">Map of Everything</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <script>
         function showInfo(title, coordinates, marker) {
             marker.classList.toggle('clicked');
@@ -475,7 +607,7 @@
                 var mapX = Math.round(relativeX) - offsetXCorrection;
                 var mapY = Math.round(relativeY) - offsetYCorrection;
 
-                coordinatesElement.textContent = '‎‎ ‎ ‎ ‎ ' + 'X: ' + (mapX * 0.437) + ', ' + 'Y: ' + (mapY * 0.437);
+                coordinatesElement.textContent = '‎‎ ‎ ‎ ‎ ' + 'X: ' + ((mapX * 0.437) + 2) + ', ' + 'Y: ' + ((mapY * 0.437) - 2);
             });
 
             map.addEventListener('mousemove', function (e) {

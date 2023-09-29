@@ -8,14 +8,12 @@
             background-color: #95BD52;
             overflow: hidden;
         }
-
         #map {
             width: 100vw;
             height: calc(100vh - 40px);
             overflow: hidden;
             position: absolute;
         }
-
             #map img {
                 width: 4000px;
                 height: 4000px;
@@ -24,7 +22,6 @@
                 left: 0;
                 cursor: move;
             }
-
         .marker {
             position: absolute;
             width: 45px;
@@ -36,11 +33,9 @@
             transform: translate(-50%, -50%);
             transition: transform 0.2s ease-in-out;
         }
-
             .marker:hover {
                 transform: scale(1.2) translate(-50%, -50%);
             }
-
             .marker span {
                 position: absolute;
                 top: -50px;
@@ -57,12 +52,10 @@
                 opacity: 0;
                 transition: visibility 0s, opacity 0.2s ease-in-out;
             }
-
             .marker.clicked span {
                 visibility: visible;
                 opacity: 1;
             }
-
             .marker:before {
                 content: "";
                 position: absolute;
@@ -73,7 +66,6 @@
                 border-right: 9px solid transparent;
                 border-top: 9px solid rgb(255, 0, 0);
             }
-
         #coordinates {
             position: fixed;
             bottom: 10px;
@@ -86,7 +78,6 @@
             font-size: 14px;
             font-weight: bold;
         }
-
         #ribbonContainer {
             position: fixed;
             top: 0;
@@ -101,7 +92,6 @@
             align-items: center;
             z-index: 999;
         }
-
         #tabContainer {
             position: fixed;
             top: 0;
@@ -115,7 +105,6 @@
             align-items: center;
             z-index: 999;
         }
-
         .ribbonIcon {
             width: 50px;
             height: 50px;
@@ -126,15 +115,24 @@
             cursor: pointer;
             transition: background-color 0.2s ease-in-out;
         }
-
             .ribbonIcon:hover {
                 background-color: #8AB06B;
             }
-
+            .ribbonIcon[title]:hover:after {
+                content: attr(title);
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 5px;
+                background-color: #333;
+                color: #fff;
+                border-radius: 5px;
+                z-index: 1;
+            }
         .ribbon.hidden {
             display: none;
         }
-
         .markerIcon {
             width: 50px;
             height: 50px;
@@ -145,11 +143,21 @@
             cursor: pointer;
             transition: background-color 0.2s ease-in-out;
         }
-
             .markerIcon:hover {
                 background-color: #8AB06B;
             }
-
+            .markerIcon[title]:hover:after {
+                content: attr(title);
+                position: absolute;
+                bottom: 100%; 
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 5px;
+                background-color: #333;
+                color: #fff;
+                border-radius: 5px;
+                z-index: 1;
+            }
         .marker.hidden {
             display: none;
         }
@@ -752,23 +760,23 @@
         </div>
     </div>
     <div id="tabContainer">
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/2.png');" onclick="toggleMarkerVisibility('Bmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/0.png');" onclick="toggleMarkerVisibility('Tmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/9.png');" onclick="toggleMarkerVisibility('Smarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/8.png');" onclick="toggleMarkerVisibility('SDmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/11.png');" onclick="toggleMarkerVisibility('CSDmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/1.png');" onclick="toggleMarkerVisibility('Amarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/3.png');" onclick="toggleMarkerVisibility('DPTmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/6.png');" onclick="toggleMarkerVisibility('Lmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/4.png');" onclick="toggleMarkerVisibility('Gmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/7.png');" onclick="toggleMarkerVisibility('Omarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/5.png');" onclick="toggleMarkerVisibility('GDetectmarker')"></div>
-        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/10.png');" onclick="toggleMarkerVisibility('Emarker')"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/2.png');" onclick="toggleMarkerVisibility('Bmarker')" title="Toggle Burgers"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/0.png');" onclick="toggleMarkerVisibility('Tmarker')" title="Toggle Tiles"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/9.png');" onclick="toggleMarkerVisibility('Smarker')" title="Toggle Skulls"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/8.png');" onclick="toggleMarkerVisibility('SDmarker')" title="Toggle Satellite"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/11.png');" onclick="toggleMarkerVisibility('CSDmarker')" title="Toggle Classic Satellite"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/1.png');" onclick="toggleMarkerVisibility('Amarker')" title="Toggle Argemia"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/3.png');" onclick="toggleMarkerVisibility('DPTmarker')" title="Toggle Diggable"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/6.png');" onclick="toggleMarkerVisibility('Lmarker')" title="Toggle Landmark"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/4.png');" onclick="toggleMarkerVisibility('Gmarker')" title="Toggle Gameplay"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/7.png');" onclick="toggleMarkerVisibility('Omarker')" title="Toggle Other"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/5.png');" onclick="toggleMarkerVisibility('GDetectmarker')" title="Toggle EMFSpot"></div>
+        <div class="markerIcon" style="background-image: url('Images/Icons/TabMarkers/10.png');" onclick="toggleMarkerVisibility('Emarker')" title="Toggle Event"></div>
     </div>
     <div id="ribbonContainer">
-        <div class="ribbonIcon" style="background-image: url('Images/Icons/RibbonMarkers/LeftAlign.png');" onclick="moveMapHorizontally(-25)"></div>
-        <div class="ribbonIcon" style="background-image: url('Images/Icons/RibbonMarkers/CenterAlign.png');" onclick="moveMapHorizontally(0)"></div>
-        <div class="ribbonIcon" style="background-image: url('Images/Icons/RibbonMarkers/RightAlign.png');" onclick="moveMapHorizontally(25)"></div>
+        <div class="ribbonIcon" style="background-image: url('Images/Icons/RibbonMarkers/LeftAlign.png');" onclick="moveMapHorizontally(-25)" title="Left Align"></div>
+        <div class="ribbonIcon" style="background-image: url('Images/Icons/RibbonMarkers/CenterAlign.png');" onclick="moveMapHorizontally(0)" title="Center Align"></div>
+        <div class="ribbonIcon" style="background-image: url('Images/Icons/RibbonMarkers/RightAlign.png');" onclick="moveMapHorizontally(25)" title="Right Align"></div>
     </div>
     <div id="promoTab">
         <div id="socialLinks">

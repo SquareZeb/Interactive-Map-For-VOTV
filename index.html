@@ -193,7 +193,13 @@
 </head>
 <body>
     <div id="map">
-        <img src="Images/Maps/Map.png" alt="Interactive Map">
+        <!-- <img src="Images/Maps/Map.png" alt="Interactive Map"> -->
+        <picture>
+            <source srcset="Images/Maps/Map.webp">
+            <source srcset="Images/Maps/Map.jpg">
+            <source srcset="Images/Maps/Map.png">
+            <img alt="preview">
+        </picture>
         <div class="marker" id="Bmarker" style="top: 2028px; left: 1907px; " onclick="showInfo('Burger', 'Coordinates', this)">
             <span>Burger:<br>(X: -63, Y: 12)<br>Located under the bridge.</span>
         </div>

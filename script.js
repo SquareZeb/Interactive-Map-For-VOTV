@@ -2,7 +2,7 @@ var map = L.map('map', {
     center: [0, 0],
     zoom: 2,
     minZoom: 0,
-    maxZoom: 6,
+    maxZoom: 5,
     zoomControl: false,
     zoomAnimation: true,
     zoomAnimationThreshold: 0,
@@ -15,7 +15,7 @@ L.control.zoom({
     position: 'bottomleft'
 }).addTo(map);
 L.tileLayer('Images/Tiles/{z}/{x}_{y}.webp', {
-    maxZoom: 6,
+    maxZoom: 5,
     attribution: '<img src="Images/Icons/Other/Promo.webp" alt="Icon" style="width:20px; height:20px;"><span style="font-size: 20px;">Created by: </span><a style="font-size: 20px;" href="https://discordapp.com/users/813250158384906260"><span style="color: green;">S</span><span style="color: blue;">q</span><span style="color: green;">u</span><span style="color: blue;">a</span><span style="color: green;">r</span><span style="color: blue;">e</span><span style="color: green;">z</span><span style="color: blue;">e</span><span style="color: green;">b</span></a><br>Credits to <a href="https://discordapp.com/users/1169983356440690779">somemonkeydude</a> on Discord for the base map.',
     noWrap: true,
     bounds: MapBounds

@@ -1,7 +1,8 @@
 # Interactive Map of VOTV
 ## Description:
-An interactive map of the game world in **_Voices of the Void (VOTV)_**. The interactive map, based off of the Leaflet API, uses map tiling for better performance and map loading times. The map features different markers and locations for each item, object, event, POI (Point of interest), and landmark. As well as the ability to zoom in (6 zoom levels), pan around, and to select and deselect different groups for better visibility. Each marker has a description, the location of said marker, and generally tip or explanation of how to access it ingame.
-![image (1)](https://github.com/SquareZeb/Interactive-Map-For-VOTV/assets/136224084/77b93515-b582-498e-8cd6-435585b86b93)
+An updated and remade version of the interactive map of the game world in **_Voices of the Void (VOTV)_**. The interactive map, based off of the Leaflet API, uses map tiling for better performance and map loading times. The map features different markers and locations for each item, object, event, POI (Point of interest), and landmark. As well as the ability to zoom in (6 zoom levels), pan around, and to select and deselect different groups for better visibility. Each marker has a description, the location of said marker, and generally tip or explanation of how to access it ingame.
+![image](https://github.com/SquareZeb/Interactive-Map-For-VOTV/assets/136224084/d4e7c2c0-88b0-43e5-86d1-eda0143dcea2)
+
 
 ## Toggle Tab:
 A tab can be opened up to reveal a list of toggleable markers you can toggle and select.
@@ -21,3 +22,7 @@ There is a coordinate system at the very top-left, however isn't 100% accurate b
 For the newer versions use this link: https://squarezeb.github.io/Interactive-Map-For-VOTV/
 This will bring up the website that is hosting this map.
 
+## Credits:
+**_Created By: SquareZeb_**
+
+**_Base Map By: somemonkeydude (on discord)_**

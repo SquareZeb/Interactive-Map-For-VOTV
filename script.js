@@ -16,7 +16,7 @@ L.control.zoom({
 }).addTo(map);
 L.tileLayer('Images/Tiles/{z}/{x}_{y}.webp', {
     maxZoom: 5,
-    attribution: '<img src="Images/Icons/Other/Promo.webp" alt="Icon" style="width:20px; height:20px;"><span style="font-size: 20px;">Created by: </span><a style="font-size: 20px;" href="https://discordapp.com/users/813250158384906260"><span style="color: green;">S</span><span style="color: blue;">q</span><span style="color: green;">u</span><span style="color: blue;">a</span><span style="color: green;">r</span><span style="color: blue;">e</span><span style="color: green;">z</span><span style="color: blue;">e</span><span style="color: green;">b</span></a><br>Credits to <a href="https://discordapp.com/users/1169983356440690779">somemonkeydude</a> on Discord for the base map.',
+    attribution: '<img src="Images/Icons/Other/Promo.webp" alt="Icon" style="width:20px; height:20px;"><span style="font-size: 20px;">Created by: </span><a style="font-size: 20px; font-weight: bold; background-color: #007bff;" href="https://discordapp.com/users/813250158384906260"><span style="color: lawngreen;">Square</span><span style="color: aqua;">Zeb</span></a><br>Credits to <a style="font-weight: bold;" href="https://discordapp.com/users/1169983356440690779">somemonkeydude</a> on Discord for the base map.',
     noWrap: true,
     bounds: MapBounds
 }).addTo(map);
@@ -74,16 +74,21 @@ var CustomBounds = L.latLngBounds(
     CustomCoordinateSystem.customToLatLng({ x: -800, y: -800 }),
     CustomCoordinateSystem.customToLatLng({ x: 800, y: 800 })  
 );
-function createCustomIcon(url, width, height) {
+function createCustomIcon(url, width, height, arrowRotation = 0, arrowHeight = 10, arrowWidth = 6, arrowColor = 'red') {
     return L.divIcon({
         className: 'custom-marker-container',
         html: `<div class="custom-marker" style="width: ${width}px; height: ${height}px;">
                     <img src="${url}" class="custom-marker-img" style="width: ${width}px; height: ${height}px;">
-                    <div class="marker-tooltip" style="top: ${height}px; left: ${width / 2 - 6}px;"></div>
+                    <div class="marker-tooltip" style="
+                        top: ${height}px; 
+                        left: ${width / 2 - arrowWidth}px;
+                        border-top: ${arrowHeight}px solid ${arrowColor};
+                        transform: rotate(${arrowRotation}deg);
+                    "></div>
                 </div>`,
-        iconSize: [width, height + 10],
-        iconAnchor: [width / 2, height + 10],
-        popupAnchor: [0, -(height + 10)]
+        iconSize: [width, height + arrowHeight],
+        iconAnchor: [width / 2, height + arrowHeight],
+        popupAnchor: [0, -(height + arrowHeight)]
     });
 }
 var markerTypes = {
@@ -107,7 +112,7 @@ Object.keys(markerTypes).forEach(function(type) {
     customMarkerLayers[type] = L.featureGroup().addTo(map);
 });
 var markersData = [
-    { lat: -3.2063, lng: -14.7656, title: 'Burger (X: -63, Y: 12)<br>Located under the bridge.', type: 'Burger' },
+    { lat: -3.2063, lng: -14.7656, title: 'Burger (X: -63, Y: 12)<br>Located under the bridge.', type: 'Burger'},
     { lat: -0.2197, lng: -2.3730, title: 'Burger (X: -12, Y: 0)<br>Located on the toilet.', type: 'Burger' },
     { lat: -7.1227, lng: -0.5273, title: 'Burger (X: -8, Y: 27)<br>Located on top of a server.', type: 'Burger' },
     { lat: -1.7795, lng: -2.4829, title: 'Burger (X: 14, Y: 8)<br>Located inside of an oven.', type: 'Burger' },
@@ -136,7 +141,7 @@ var markersData = [
     { lat: 1.0986, lng: 123.2886, title: 'Tile (X: 500, Y: -2)<br>Located behind the top level of the Uniform Satellite Dish.', type: 'Tile' },
     { lat: -81.9571, lng: 151.5894, title: 'Tile (X: 615, Y: 620)<br>Located next to Green Box.', type: 'Tile' },
     { lat: -84.4401, lng: -91.8677, title: 'Tile (X: -372, Y: 702)<br>Located above the building in Guard Post.', type: 'Tile' },
-    { lat: 84.8104, lng: 177.3633, title: 'Tile (X: 874, Y: -874)<br>Located on the very corner of the playable map, two rivers corner.', type: 'Tile' },
+    { lat: 84.8104, lng: 177.3633, title: 'Tile (X: 874, Y: -874)<br>Located on the very corner of the playable map, two rivers corner.', type: 'Tile', arrowRotation: -135, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: -79.1134, lng: 52.7344, title: 'Skull (X: 213, Y: 549)<br>Located offset of the center of the Stonehenge behind one layer of grass.', type: 'Skull' },
     { lat: -59.4786, lng: -141.0425, title: 'Skull (X: -569, Y: 302)<br>Located near a skeleton of bones and a radioactive capsule. In the Darkened Bone Pit.', type: 'Skull' },
     { lat: -10.0554, lng: -83.6719, title: 'Skull (X: -343, Y: 38)<br>Located near the Light Pit, it will be found outside the vicinity of the Light Bone Pit behind a couple bushes.', type: 'Skull' },
@@ -194,9 +199,9 @@ var markersData = [
     { lat: 23.6445, lng: 50.6030, title: 'Eggen (X: 200, Y: -100)<br>Satellite Dish', type: 'Classic Satellite' },
     { lat: 30.2401, lng: 155.7642, title: 'Red Argemia (X: 626, Y: -128)<br>Located in the Deep Pit next to Uniform Satellite Dish, near the fence.', type: 'Argemia' },
     { lat: -70.0581, lng: -77.5195, title: 'Blue Argemia (X: -315, Y: 398)<br>Located right next to Quebec Satellite Dish, in a river with bumpy beaches.', type: 'Argemia' },
-    { lat: -84.8342, lng: 76.0254, title: 'Green Argemia (X: 239, Y: 828)<br>Located on the highest point of the map, outside the fence, near Victor Satellite Dish.', type: 'Argemia' },
+    { lat: -84.8342, lng: 76.0254, title: 'Green Argemia (X: 239, Y: 828)<br>Located on the highest point of the map, outside the fence, near Victor Satellite Dish.', type: 'Argemia', arrowRotation: 0, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: -41.8205, lng: -156.6211, title: 'Cyan Argemia (X: -630, Y: 190)<br>(Requires: Shovel, Metal Detector) Located on top of a high hill between Quebec and X-ray Satellite Dishes.', type: 'Argemia' },
-    { lat: 84.3543, lng: 177.6270, title: 'Orange Argemia (X: 872, Y: -793)<br>Located above the border corner tile key, on top of a floating invisible cube that is high up.<br> The only way to access this prop is getting on top of the cube and grabbing the prop.', type: 'Argemia' },
+    { lat: 84.3543, lng: 177.6270, title: 'Orange Argemia (X: 872, Y: -793)<br>Located above the border corner tile key, on top of a floating invisible cube that is high up.<br> The only way to access this prop is getting on top of the cube and grabbing the prop.', type: 'Argemia', arrowRotation: -135, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: 8.4072, lng: 9.5801, title: 'Pink Argemia (X: 34.8, Y: -36.8)<br>Located in a hovering state, it is invisible (until it is touched by any object or item in the game),<br>fly a drone straight from these approximate coordinates until you bump into it.', type: 'Argemia' },
     { lat: 8.6462, lng: -153.1714, title: 'Diggable Spot (X: -622, Y: -31)<br>EMF Reader.', type: 'Diggable' },
     { lat: 10.1852, lng: -28.6084, title: 'Diggable Spot (X: -118, Y: -41)<br>Free Box of LVL 3 Drives.', type: 'Diggable' },
@@ -252,17 +257,17 @@ var markersData = [
     { lat: 67.3906, lng: 92.1533, title: 'Pickaxe (X: -391, Y: -384)<br>You can mine crystals in the cave using this.', type: 'Other' },
     { lat: 80.3791, lng: -166.6406, title: 'Furfur Altar Piece (X: -671, Y: -563)<br>Furfur Altar Piece', type: 'Other' },
     { lat: -34.5609, lng: -78.9697, title: 'Earth Rune Box (X: -320, Y: 148)<br>Farm Earth Runes', type: 'Other' },
-    { lat: 84.5162, lng: 129.7705, title: 'Water Rune Box (X: 627, Y: -874)<br>Farm Water Runes', type: 'Other' },
+    { lat: 84.5162, lng: 129.7705, title: 'Water Rune Box (X: 627, Y: -874)<br>Farm Water Runes', type: 'Other', arrowRotation: 180, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue'  },
     { lat: 77.5231, lng: 0.7031, title: 'Erie Zone (X: 11, Y: -512)<br>Zone where you can farm and obtain Erie Plushes.', type: 'Other' },
     { lat: -10.4345, lng: 4.9668, title: 'Omega Kerfus Blueprint (X: 17, Y: 40)<br>Crafting blueprint for Omega Kerfuses.', type: 'Other' },
     { lat: 61.8250, lng: 59.3701, title: 'Barrel of MREs (X: 235, Y: -323)<br>Barrel of free food.', type: 'Other' },
     { lat: 39.9097, lng: 132.4512, title: 'Earth Rune Slab (X: 538, Y: -181)<br>Dig in exactly as the coordinates say which would be under a bush.', type: 'Other' },
     { lat: 71.8836, lng: 101.4258, title: 'Water Rune Slab (X: 418, Y: -422)<br>Dig at the deepest point of The Lake.', type: 'Other' },
     { lat: -43.4050, lng: 95.3613, title: 'Air Rune Slab (X: 387, Y:196)<br>You must grab it from the top of the Powerline Pole.', type: 'Other' },
-    { lat: -84.8500, lng: 175.6934, title: 'Fire Rune Slab (X: 1,991, Y: 1999)<br>Will require the Ritual Warp Event, dig up the slab from behind ritual table and jump out the island to land safely on top of the Small Graveyard Landmark.', type: 'Other' },
+    { lat: -84.8500, lng: 175.6934, title: 'Fire Rune Slab (X: 1,991, Y: 1999)<br>Will require the Ritual Warp Event, dig up the slab from behind ritual table and jump out the island to land safely on top of the Small Graveyard Landmark.', type: 'Other', arrowRotation: -45, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: -5.2441, lng: 101.3818, title: 'Wendigo Skull (X: 408, Y: 22)<br>Located within the Wooded Shack underneath an red ariral forest tree.', type: 'Other' },
     { lat: 59.2097, lng: -15.2271, title: 'Argemia Mug (X: -58, Y: -295)<br>Located on top of the power line pole, can only be accessed by grabbing it, no object or prop can push it off.', type: 'Other' },
-    { lat: 84.7424, lng: -177.1655, title: 'Bryn Fruit (X: -785, Y: -821)<br>Located behind a tree near Erie and Argemia Statues.', type: 'Other' },
+    { lat: 84.7424, lng: -177.1655, title: 'Bryn Fruit (X: -785, Y: -821)<br>Located behind a tree near Erie and Argemia Statues.', type: 'Other', arrowRotation: 135, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: -43.6440, lng: 98.3496, title: 'Transformer 0 (X: 396, Y: 199)<br>Gameplay Mechanic', type: 'Gameplay' },
     { lat: -49.7387, lng: -135.6812, title: 'Transformer 1 (X: -548, Y: 232)<br>Gameplay Mechanic', type: 'Gameplay' },
     { lat: 75.1013, lng: -98.3716, title: 'Transformer 2 (X: -397, Y: -472)<br>Gameplay Mechanic', type: 'Gameplay' },
@@ -274,7 +279,7 @@ var markersData = [
     { lat: 74.3726, lng: 110.6982, title: 'Invisible Boulder (X: 437, Y: -467)<br>Object (Removed)', type: 'Landmark' },
     { lat: 80.1186, lng: 169.0137, title: 'Green Campfire (X: 680, Y: -573)<br>Object', type: 'Landmark' },
     { lat: 64.4444, lng: 70.7520, title: 'Hanged Man (X: 280, Y: -349)<br>Object', type: 'Landmark' },
-    { lat: 84.8559, lng: -177.7808, title: 'Erie and Argemia Statues (X: -801, Y: -814)<br>Outside the fence.', type: 'Landmark' },
+    { lat: 84.8559, lng: -177.7808, title: 'Erie and Argemia Statues (X: -801, Y: -814)<br>Outside the fence.', type: 'Landmark', arrowRotation: 135, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: -84.3888, lng: -92.5269, title: 'Guard Post (X: -373, Y: 703)<br>Outside the fence.', type: 'Landmark' },
     { lat: -0.5054, lng: 0.8350, title: 'Main Base (X: 0, Y: 0)<br>Located in the middle of the entire world.', type: 'Landmark' },
     { lat: -6.7955, lng: 6.0645, title: 'Bunker (X: 20, Y: 25)<br>Located right beside the Main Base.', type: 'Landmark' },
@@ -288,8 +293,8 @@ var markersData = [
     { lat: -68.4880, lng: 91.3403, title: 'Ariral Treehouse (X: 366, Y: 388)<br>Near the Stonehenge Landmark (Event specific).', type: 'Landmark' },
     { lat: 7.4714, lng: -153.7427, title: 'The Hole (X: -618, Y: -27)<br>Near Yankee Satellite Dish.', type: 'Landmark' },
     { lat: 21.3917, lng: -174.4629, title: 'Fence Opening (X: -697, Y: -80)<br>Near The Hole.', type: 'Landmark' },
-    { lat: 50.4015, lng: -177.0117, title: 'Secret Staircase (X: 1293, Y: -223)<br>Inaccessible in Storymode,<br>location is outside the barrier.', type: 'Landmark' },
-    { lat: -84.9438, lng: -89.6484, title: 'Large Bone Pit (X: -265, Y: 1005)<br>Inaccessible in Storymode, location is outside the barrier, near Guard Post.', type: 'Landmark' },
+    { lat: 50.4015, lng: -177.0117, title: 'Secret Staircase (X: 1293, Y: -223)<br>Inaccessible in Storymode,<br>location is outside the barrier.', type: 'Landmark', arrowRotation: 90, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
+    { lat: -84.9438, lng: -89.6484, title: 'Large Bone Pit (X: -265, Y: 1005)<br>Inaccessible in Storymode, location is outside the barrier, near Guard Post.', type: 'Landmark', arrowRotation: 0, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: 48.8647, lng: -161.1035, title: 'Crashed Ariral Tp Chamber (X: -651, Y: -237)<br>Located in the bottom of the valley near the Fence Opening (Event specific).', type: 'Landmark' },
     { lat: -54.1238, lng: 139.1089, title: 'Abandoned Well (X: 564, Y: 265)<br>Located between the Uniform and Victor satellite Dishes.', type: 'Landmark' },
     { lat: 80.0580, lng: -86.3745, title: 'Small Graveyard (X: -347, Y: -563)<br>Located on a hill above Transformer 2.', type: 'Landmark' },
@@ -301,7 +306,7 @@ var markersData = [
     { lat: -82.1545, lng: 14.6558, title: 'Bomb Shelter (X: 60, Y: 625)<br>Located near the Circle of Benches.', type: 'Other' },
     { lat: 81.0523, lng: 156.0059, title: 'Danger Forest (X: -642, Y: -586)<br>Located in the corner of land that is cut off by the river, near Tango Satellite Dish.', type: 'Landmark' },
     { lat: 47.3388, lng: 132.0117, title: 'Closed Up Forest (X: 517, Y: -211)<br>Located near the Deep Pit, throw and jump into ATV over the fence to access.', type: 'Landmark' },
-    { lat: -84.8025, lng: 177.4512, title: 'Ritual Altar (X: 1994, Y: 1999)<br>You need to perform the Ritual Warp Event in order to warp to this landmark.', type: 'Landmark' },
+    { lat: -84.8025, lng: 177.4512, title: 'Ritual Altar (X: 1994, Y: 1999)<br>You need to perform the Ritual Warp Event in order to warp to this landmark.', type: 'Landmark', arrowRotation: -45, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: 2.9869, lng: 1.1865, title: 'Green Cabinent Room (X: -1, Y: -14)<br>Innacessible in storymode, you could attempt to glitch or noclip inside the SCP-421 to warp there.<br>Actual landmark is located underneath the map.', type: 'Landmark' },
     { lat: 70.0806, lng: 97.9102, title: 'The Lake (X: 408, Y: -406)<br>Giant lake.', type: 'Landmark' },
     { lat: -84.2672, lng: -93.7793, title: 'Pumpkin (Halloween Special) (X: -382, Y: 695)<br>Located near Guard Post.', type: 'Pumpkin' },
@@ -346,7 +351,7 @@ var markersData = [
     { lat: -11.1568, lng: 157.6099, title: 'Ship Engine Event (X: 637, Y: 44)', type: 'Event' },
     { lat: -78.8573, lng: 52.5586, title: 'Hell Opening Event (X: 213, Y: 541)', type: 'Event' },
     { lat: -5.1785, lng: 101.7334, title: 'Ritual Warp Event (X: 408, Y: 22)', type: 'Event' },
-    { lat: -84.9303, lng: 178.2202, title: 'Ritual Event (X: 1994, Y: 1999)', type: 'Event' },
+    { lat: -84.9303, lng: 178.2202, title: 'Ritual Event (X: 1994, Y: 1999)', type: 'Event', arrowRotation: -45, arrowHeight: 15, arrowWidth: 8, arrowColor: 'blue' },
     { lat: 82.9565, lng: -161.1035, title: 'Log Event (X: -645, Y: -645)', type: 'Event' },
     { lat: -49.4253, lng: 91.7358, title: 'Log Event (X: 373, Y: 234)', type: 'Event' },
     { lat: -5.5285, lng: 0.6152, title: 'Looker Event (X: 1, Y: 18)', type: 'Event' },
@@ -374,7 +379,7 @@ var markersData = [
     { lat: -0.4394, lng: -4.5044, title: 'Ariral ATV Repair Event (X: -19, Y: 0)', type: 'Event' },
     { lat: -0.4614, lng: -3.5156, title: 'Ariral ATV Fuelup Event (X: -19, Y: 0)', type: 'Event' },
     { lat: -2.6797, lng: -0.8569, title: 'Spaceman Event (X: -7, Y: 16)', type: 'Event' },
-    { lat: -84.9882, lng: 175.8252, title: 'Furfur Plush Event (X: 1994, Y: 1999)', type: 'Event' },
+    { lat: -84.9882, lng: 175.8252, title: 'Furfur Plush Event (X: 1994, Y: 1999)', type: 'Event', arrowRotation: -45, arrowHeight: 20, arrowWidth: 8, arrowColor: 'blue' },
     { lat: 81.4695, lng: -160.6421, title: 'Wolfgang Awakening Event (X: -655, Y: -602)', type: 'Event' },
     { lat: -2.4163, lng: -1.9336, title: 'Cursed Mirror Base Event (Unknown)', type: 'Event' },
     { lat: -7.1881, lng: -1.6919, title: 'Furfur Locker Head (X: -15, Y: 17)', type: 'Event' },
@@ -387,19 +392,46 @@ var markersData = [
 markersData.forEach(function(marker) {
     var customIcon = createCustomIcon(markerTypes[marker.type], 30, 30);
     if (marker.type === 'Satellite') {
-        var customIcon = createCustomIcon(markerTypes[marker.type], 46, 70);
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 70, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
     }
     if (marker.type === 'Burger') {
-        var customIcon = createCustomIcon(markerTypes[marker.type], 30, 25);
+        customIcon = createCustomIcon(markerTypes[marker.type], 30, 25, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
     }
     if (marker.type === 'Classic Satellite') {
-        var customIcon = createCustomIcon(markerTypes[marker.type], 46, 70);
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 70, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
     }
     if (marker.type === 'Argemia') {
-        var customIcon = createCustomIcon(markerTypes[marker.type], 46, 70);
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 70, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
     }
     if (marker.type === 'Diggable') {
-        var customIcon = createCustomIcon(markerTypes[marker.type], 46, 70);
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 70, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Tile') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Skull') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Landmark') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Gameplay') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'EMFSpot') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Event') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Pumpkin') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Other') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
+    }
+    if (marker.type === 'Note') {
+        customIcon = createCustomIcon(markerTypes[marker.type], 46, 46, marker.arrowRotation, marker.arrowHeight, marker.arrowWidth, marker.arrowColor);
     }
     L.marker([marker.lat, marker.lng], { icon: customIcon })
         .bindPopup(marker.title, { className: 'custom-popup' })
